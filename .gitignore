@@ -1,0 +1,76 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Secrets (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+kubeconfig*
+*.kubeconfig
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!*.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+.terraform.tfstate.lock.info
+# DO commit .terraform.lock.hcl
+
+# Helm
+charts/*/charts/
+charts/*/*.tgz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Go
+bin/
+*.test
+*.out
+
+# Firmware (ESP-IDF / PlatformIO / Arduino)
+.pio/
+sdkconfig.old
+managed_components/
+*.bin
+*.elf
+*.map
+
+# C/C++
+*.o
+*.a
+*.so
+cmake-build-*/
+
+# Node (dashboards, tools)
+node_modules/
+
+# ML artifacts (keep out of git; use S3/HF)
+*.safetensors
+*.gguf
+*.pt
+*.ckpt
+
+# Media from filming the series
+*.mov
+*.mp4
