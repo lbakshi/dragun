@@ -13,7 +13,7 @@ help:
 	  'start             Start the local cluster' \
 	  'stop              Stop the local cluster' \
 	  'status            Show local cluster status' \
-	  'ENV=local (default); dev and prod are not configured yet.' \
+	  'ENV=local selects the local cluster; dev and prod are not configured yet.' \
 	  'Overrides: PROFILE=$(PROFILE) DRIVER=$(DRIVER)'
 
 setup: check
