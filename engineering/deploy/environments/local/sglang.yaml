@@ -1,0 +1,15 @@
+image:
+  reference: dragun/sglang-cpu:local
+  pullPolicy: Never
+model: Qwen/Qwen2.5-0.5B-Instruct
+command: ["/opt/.venv/bin/python", "-m", "sglang.launch_server"]
+extraArgs: ["--device", "cpu", "--disable-cuda-graph", "--context-length", "2048"]
+env:
+  - name: SGLANG_USE_CPU_ENGINE
+    value: "1"
+resources:
+  requests:
+    cpu: "1"
+    memory: 2Gi
+  limits:
+    memory: 4Gi

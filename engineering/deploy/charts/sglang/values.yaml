@@ -1,0 +1,22 @@
+image:
+  reference: ""
+  pullPolicy: IfNotPresent
+model: ""
+port: 30000
+replicaCount: 1
+command: ["python3", "-m", "sglang.launch_server"]
+extraArgs: []
+env: []
+service:
+  type: ClusterIP
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+readinessProbe:
+  httpGet:
+    path: /health
+    port: http
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  failureThreshold: 60
