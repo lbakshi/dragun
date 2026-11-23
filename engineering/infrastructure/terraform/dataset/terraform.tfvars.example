@@ -1,0 +1,4 @@
+aws_region     = "replace-with-aws-region"
+aws_profile    = "replace-with-aws-profile"
+aws_account_id = "replace-with-aws-account-id"
+bucket_name    = "replace-with-a-globally-unique-dataset-bucket-name"
