@@ -2,7 +2,7 @@
 ENGINEERING_DIR := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 
 ifeq ($(ENV),local)
--include $(ENGINEERING_DIR)/infrastructure/minikube/Makefile
+include $(ENGINEERING_DIR)/infrastructure/minikube/Makefile
 else ifeq ($(ENV),)
 # Terraform targets do not require a cluster environment.
 else ifeq ($(ENV),dev)
@@ -16,9 +16,6 @@ endif
 include $(ENGINEERING_DIR)/infrastructure/terraform/Makefile
 
 ifeq ($(ENV),)
-.PHONY: help
-help: tf-help
-else ifeq ($(wildcard $(ENGINEERING_DIR)/infrastructure/minikube/Makefile),)
 .PHONY: help
 help: tf-help
 endif
