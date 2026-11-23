@@ -4,7 +4,7 @@ MINIKUBE ?= minikube
 PROFILE ?= dragun
 DRIVER ?= docker
 
-.PHONY: help setup check start stop status
+.PHONY: help setup check start stop status teardown
 
 help:
 	@printf '%s\n' \
@@ -13,6 +13,7 @@ help:
 	  'start             Start the local cluster' \
 	  'stop              Stop the local cluster' \
 	  'status            Show local cluster status' \
+	  'teardown          Delete the local cluster and its data' \
 	  'ENV=local (default); dev and prod are not configured yet.' \
 	  'Overrides: PROFILE=$(PROFILE) DRIVER=$(DRIVER)'
 
@@ -36,3 +37,6 @@ stop:
 
 status:
 	$(MINIKUBE) status --profile "$(PROFILE)"
+
+teardown:
+	$(MINIKUBE) delete --profile "$(PROFILE)"
