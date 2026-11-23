@@ -20,9 +20,11 @@ kubeconfig*
 **/.terraform/*
 *.tfstate
 *.tfstate.*
+*.tfplan
 crash.log
 *.tfvars
 !*.tfvars.example
+backend.hcl
 override.tf
 override.tf.json
 *_override.tf
@@ -66,6 +68,8 @@ cmake-build-*/
 node_modules/
 
 # ML artifacts (keep out of git; use S3/HF)
+# Private source dialogue and derived training data
+/dataset
 *.safetensors
 *.gguf
 *.pt

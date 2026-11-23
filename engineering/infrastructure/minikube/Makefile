@@ -22,7 +22,7 @@ help:
 	  'teardown          Delete the local cluster and its data' \
 	  'sglang-image      Build the local ARM64 CPU image' \
 	  'sglang-deploy     Load the image and install the SGLang chart' \
-	  'ENV=local (default); dev and prod are not configured yet.' \
+	  'ENV=local selects the local cluster; dev and prod are not configured yet.' \
 	  'Overrides: PROFILE=$(PROFILE) DRIVER=$(DRIVER) CPUS=$(CPUS) MEMORY=$(MEMORY)'
 
 setup: check

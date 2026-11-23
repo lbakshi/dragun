@@ -1,0 +1,5 @@
+bucket         = "replace-with-state-bucket"
+region         = "replace-with-state-bucket-region"
+profile        = "replace-with-aws-profile"
+dynamodb_table = "replace-with-lock-table"
+encrypt        = true
