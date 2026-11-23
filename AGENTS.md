@@ -6,6 +6,11 @@
 - Avoid fragile relative paths where possible. Anchor project paths to the
   checkout root or another explicitly defined directory, especially in build
   scripts and Makefile includes.
+- Organize Terraform by component first under
+  `engineering/infrastructure/terraform/`. Give deployable components their
+  own roots; reserve `modules/` for reusable building blocks. When a component
+  has multiple environments, identify each explicitly within the component and
+  use separate state. Identify shared components explicitly.
 
 # Project purpose
 
